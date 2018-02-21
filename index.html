@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="canonical" href="https://thibbal.github.io/MyFirstPWA/" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="manifest" href="manifest.json">
@@ -13,7 +14,16 @@
 <p>
     <img src="images/donald.jpeg">
 </p>
+<script>
+    // register ServiceWorker, remember to use absolute path!
+    if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/{repository}/sw.js', {scope: '/{repository}/'})
+    }
 
+    // --- Application code here ---
+</script>
+<!--
 <script src="js/app.js"></script>
+-->
 </body>
 </html>
